@@ -5,6 +5,7 @@ class Api::ContactsController < ApplicationController
   end
 
   def index
-    render index.json.jb
+    @contact = Contact.all 
+    render 'index.json.jb'
   end
 end
